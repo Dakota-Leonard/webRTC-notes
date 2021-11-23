@@ -21,3 +21,14 @@ General Steps:
 * One to One NAT (Full cone NAT) - Packets to external IP:port on the router always map to internal IP:port without exceptions.
 * Address Restricted NAT - Packets to external IP:port on the router always maps to internal IP:port as long as source address from packet matches the table (regardless of port). If it has communicated with the host before it is allowed.
 * Port Restricted NAT - Packets to external IP:port on the router always map to internal IP:port as long as source address and port from the packet matches the table. If it has communicated with this host:port before it is allowed
+
+## STUN (Session Traversal Utilities for NAT)
+* Tells me my public IP address/port through NAT.
+* Works for Full-cone, Port, and Address restricted NAT. Does not work for symmetric NAT.
+* STUN server port 3478 (5349 for TLS)
+* Cheap to maintain.
+* Stun request cycle:
+	1. Packet generated to request STN.
+	2. Router receives it and does NAT’ing.
+	3. STUN server receives it and sends a packet back with the IP/port.
+	4. It goes to the router and then back to the originating request client.
