@@ -14,3 +14,10 @@ General Steps:
 4. A and B signal this session information via other means (WhatsApp, QR, Tweet, WebSockets, HTTP Fetch, etc)
 5. A connects to B via the most optimal path.
 6. A & B also exchange their supported media and security.
+
+## NAT  (Network Address Translation)
+* Different translation methods: One to One NAT (Full-cone NAT), Address restricted NAT, Port restricted NAT, Symmetric NAT.
+* WebRTC does not like Symmetric NAT.
+* One to One NAT (Full cone NAT) - Packets to external IP:port on the router always map to internal IP:port without exceptions.
+* Address Restricted NAT - Packets to external IP:port on the router always maps to internal IP:port as long as source address from packet matches the table (regardless of port). If it has communicated with the host before it is allowed.
+* Port Restricted NAT - Packets to external IP:port on the router always map to internal IP:port as long as source address and port from the packet matches the table. If it has communicated with this host:port before it is allowed
