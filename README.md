@@ -38,3 +38,8 @@ General Steps:
 * It is just a server that relays packets.
 * TURN default server port 3478 (5349 for TLS)
 * Expensive to maintain and run
+
+## ICE (Interactive Connectivity Establishment)
+* ICE collects all available candidates (local IP addresses, reflexive addresses (STUN addresses) and relayed addresses (TURN addresses). Collects all the way something can be connected to.
+* Possible connection pathways are called ICE candidates
+* All the collected addresses are then sent to the remote peer via SDP.
