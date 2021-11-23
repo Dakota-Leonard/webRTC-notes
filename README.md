@@ -32,3 +32,9 @@ General Steps:
 	2. Router receives it and does NAT’ing.
 	3. STUN server receives it and sends a packet back with the IP/port.
 	4. It goes to the router and then back to the originating request client.
+
+## TURN (Traversal Using Relays around NAT)
+* In case of Symmetric NAT we use TURN.
+* It is just a server that relays packets.
+* TURN default server port 3478 (5349 for TLS)
+* Expensive to maintain and run
