@@ -54,3 +54,11 @@ General Steps:
 * SDP Signaling
 * Send the SDP that we just generated somehow to the other part we wish to communicate with.
 * Signaling can be done with a tweet, QR code, WhatsApp, WebSockets, HTTP. Etc. It doesn’t matter. WebRTC does not care how it is sent.
+
+## WebRTC Steps (recap)
+1. A wants to connect to B.
+2. A creates an “offer”, finds all ICE candidates, security options, audio/video options, and generates SDP. The offer is essentially the SDP.
+3. A singles the offer to B by whatever means.
+4. B creates the “answer” after setting A’s offer.
+5. B signals the “answer” back to A.
+6. Connection is created.
